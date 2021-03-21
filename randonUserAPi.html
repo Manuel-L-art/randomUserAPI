@@ -11,12 +11,14 @@
     </head>
     <body>
         <div class="container-fluid">
-            <h1>Hello there!</h1>
-            <div class="row" id="first_row">
-                <!--Insert Here-->
-            </div>
-            <div class="row" id="second_row">
-                <!-- Insert Here -->
+            <div class="container">
+                <h1>Hello there!</h1>
+                <div class="row row-cols-5" id="first_row">
+                    <!--Insert Here-->
+                </div>
+                <div class="row" id="second_row">
+                    <!-- Insert Here -->
+                </div>
             </div>
         </div>
         <script>
@@ -30,8 +32,8 @@
                         var name = results[i].name.first +" " + results[i].name.last;
                         var location = results[i].location.street.number + " " +results[i].location.street.name + " " + results[i].location.city + "<hr>"+ results[i].location.state + " " + results[i].location.country;
 
-                        htmlStr += "<div class='card' style='width: 18rem;'>";
-                        htmlStr += "<img src=" + results[i].picture.thumbnail +" class='card-img-top' alt='profile-pic'>";
+                        htmlStr += "<div class='card m-2 border-0' style='width: 13rem;'>";
+                        htmlStr += "<img src=" + results[i].picture.thumbnail +" class='card-img-top rounded-circle' alt='profile-pic'>";
                         htmlStr += "<div class='card-body'>";
                         htmlStr += "<h5 class='card-title'>" + name + "</h5>";
                         htmlStr += "<p class='card-text'>" + location + "</p>"; 
